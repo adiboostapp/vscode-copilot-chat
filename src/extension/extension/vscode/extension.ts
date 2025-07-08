@@ -16,6 +16,8 @@ import { ContributionCollection, IExtensionContributionFactory } from '../../com
 import { ILanguageModelService } from '../../../platform/languageModel/common/languageModelService';
 import { CopilotOfficialLanguageModelProvider } from '../../../platform/languageModel/node/copilotOfficialLanguageModelProvider';
 import { MockLanguageModelProvider } from '../../../platform/languageModel/node/mockLanguageModelProvider';
+import { OpenAIUserLanguageModelProvider } from '../../../platform/languageModel/node/openaiUserLanguageModelProvider';
+import { OllamaLanguageModelProvider } from '../../../platform/languageModel/node/ollamaLanguageModelProvider'; // Added import
 import { ILogService } from '../../../platform/log/common/logService';
 
 // ##################################################################################
@@ -129,6 +131,17 @@ export function createInstantiationService(configuration: IExtensionActivationCo
 					languageModelService.registerProvider(mockProvider);
 					logService.info('Successfully registered MockLanguageModelProvider with LanguageModelService.');
 				}
+
+				// Register OpenAI User Provider
+				const openaiUserProvider = instantiationService.createInstance(OpenAIUserLanguageModelProvider);
+				languageModelService.registerProvider(openaiUserProvider);
+				logService.info('Successfully registered OpenAIUserLanguageModelProvider with LanguageModelService.');
+
+				// Register Ollama Provider
+				const ollamaProvider = instantiationService.createInstance(OllamaLanguageModelProvider);
+				languageModelService.registerProvider(ollamaProvider);
+				logService.info('Successfully registered OllamaLanguageModelProvider with LanguageModelService.');
+
 			} else {
 				logService.error('LanguageModelService not available to register providers.');
 			}

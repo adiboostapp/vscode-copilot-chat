@@ -295,5 +295,14 @@
 	"copilot.toolSet.runTasks.description": "Run tasks in your workspace",
 	"github.copilot.config.languageModelProviderId": "Selects the Language Model Provider to use for Copilot Chat features. Requires a reload to take effect.",
 	"github.copilot.config.languageModelProviderId.copilotOfficialDescription": "Uses the official GitHub Copilot language model service.",
-	"github.copilot.config.languageModelProviderId.mockProviderDescription": "Uses a mock provider for testing and development. Returns predefined responses."
+	"github.copilot.config.languageModelProviderId.mockProviderDescription": "Uses a mock provider for testing and development. Returns predefined responses.",
+	"github.copilot.config.languageModelProviderId.openaiUserDescription": "Uses OpenAI models with a user-provided API key.",
+	"github.copilot.config.languageModelProviderId.ollamaDescription": "Uses a locally running Ollama instance.",
+	"github.copilot.config.languageModelProviders.openaiUser.apiKey.description": "Your OpenAI API key. This will be stored securely.",
+	"github.copilot.config.languageModelProviders.openaiUser.modelId.description": "The OpenAI model ID to use (e.g., gpt-4-turbo-preview, gpt-3.5-turbo).",
+	"github.copilot.config.languageModelProviders.openaiUser.apiBaseUrl.description": "Optional: The base URL for the OpenAI API compatible endpoint.",
+	"github.copilot.config.languageModelProviders.ollama.baseUrl.description": "The base URL for your Ollama instance (e.g., http://localhost:11434).",
+	"github.copilot.config.languageModelProviders.ollama.modelId.description": "The Ollama model ID to use (e.g., llama2:7b, codellama:13b). Ensure the model is pulled in Ollama.",
+	"github.copilot.config.languageModelProviders.ollama.keepAliveTime.description": "Controls how long models stay loaded in memory in Ollama (e.g., 5m, 1h).",
+	"github.copilot.config.languageModelProviders.ollama.embeddingModelId.description": "Optional: The Ollama model ID to use for embeddings, if different from the chat model."
 }
