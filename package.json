@@ -2300,11 +2300,59 @@
 						"default": "copilot-official",
 						"markdownDescription": "%github.copilot.config.languageModelProviderId%",
 						"scope": "machine-overridable",
-						"enum": ["copilot-official", "mock-provider"],
+						"enum": ["copilot-official", "mock-provider", "openai-user", "ollama"],
 						"enumDescriptions": [
 							"%github.copilot.config.languageModelProviderId.copilotOfficialDescription%",
-							"%github.copilot.config.languageModelProviderId.mockProviderDescription%"
+							"%github.copilot.config.languageModelProviderId.mockProviderDescription%",
+							"%github.copilot.config.languageModelProviderId.openaiUserDescription%",
+							"%github.copilot.config.languageModelProviderId.ollamaDescription%"
 						]
+					},
+					"github.copilot.chat.languageModelProviders.openaiUser.apiKey": {
+						"type": "string",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.openaiUser.apiKey.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
+					},
+					"github.copilot.chat.languageModelProviders.openaiUser.modelId": {
+						"type": "string",
+						"default": "gpt-4-turbo-preview",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.openaiUser.modelId.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
+					},
+					"github.copilot.chat.languageModelProviders.openaiUser.apiBaseUrl": {
+						"type": "string",
+						"default": "https://api.openai.com/v1",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.openaiUser.apiBaseUrl.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
+					},
+					"github.copilot.chat.languageModelProviders.ollama.baseUrl": {
+						"type": "string",
+						"default": "http://localhost:11434",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.ollama.baseUrl.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
+					},
+					"github.copilot.chat.languageModelProviders.ollama.modelId": {
+						"type": "string",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.ollama.modelId.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
+					},
+					"github.copilot.chat.languageModelProviders.ollama.keepAliveTime": {
+						"type": "string",
+						"default": "5m",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.ollama.keepAliveTime.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
+					},
+					 "github.copilot.chat.languageModelProviders.ollama.embeddingModelId": {
+						"type": "string",
+						"markdownDescription": "%github.copilot.config.languageModelProviders.ollama.embeddingModelId.description%",
+						"scope": "machine-overridable",
+						"tags": ["languageModelProviderSetting"]
 					}
 				}
 			},
